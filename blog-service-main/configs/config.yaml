@@ -1,0 +1,109 @@
+#
+##服务配置
+#Server:
+#  RunMode: debug  #gin的运行模式
+#  HttpPort: 8080  #默认的HTTP监听端口
+#  ReadTimeout: 60 #允许读取的最大持续时间
+#  WriteTimeout: 60  #允许写入的最大持续时间
+#
+##应用配置
+#App:
+#  DefaultPageSize: 10 #默认每页数量
+#  MaxPageSize: 100  #所允许的最大每页数量
+#  LogSavePath: storage/logs #默认的应用日志存储路径
+#  LogFileName: app
+#  LogFileExt: .log
+##  #新增了四项上传文件所必须的配置项：  *修改了
+##  UploadSavePath: storage/uploads #上传文件的最终保存目录
+##  UploadServerUrl: http://127.0.0.1:8080/static #上传文件后的用于展示的文件服务地址。
+##  UploadImageMaxSize: 5  #上传文件所允许的最大空间大小（MB）
+##  UploadImageAllowExts: #上传文件所允许的文件后缀
+##    - .jpg
+##    - .jpeg
+##    - .png
+##  DefaultContextTimeout: 60
+#
+##数据库配置
+#Database:
+#  DBType: mysql
+#  Username: root  # 填写你的数据库账号
+#  Password: root  # 填写你的数据库密码
+#  Host: 127.0.0.1:3306
+#  DBName: blog_service
+#  TablePrefix: blog_
+#  Charset: utf8
+#  ParseTime: True
+#  MaxIdleConns: 10
+#  MaxOpenConns: 30
+#
+#
+#JWT:
+#   Secret: eddycjy  #设置JWT令牌的 Secret（密钥）为 eddycjy     Secret 千万不要暴露给外部，只能有服务端知道，否则是可以解密出来的，非常危险
+#   Issuer: blog-service #签发者（Issuer）是 blog-service
+#   Expire: 7200 #有效时间（Expire）为7200秒
+#
+#
+#Email:
+#  Host: smtp.qq.com #通过 HOST 我们可以知道我用的是 QQ 邮件的 SMTP
+#  Port: 465 #SMTP Server 的 HOST 端口号
+#  UserName: xxxx@qq.com
+#  Password: xxxxxxxx
+#  IsSSL: true
+#  From: xxxx@qq.com
+#  To:
+#    - xxxx@qq.com
+
+
+#服务配置
+Server:
+  RunMode: debug  #gin的运行模式
+  HttpPort: 8080  #默认的HTTP监听端口
+  ReadTimeout: 60 #允许读取的最大持续时间
+  WriteTimeout: 60  #允许写入的最大持续时间
+
+#应用配置
+App:
+  DefaultPageSize: 10 #默认每页数量
+  MaxPageSize: 100  #所允许的最大每页数量
+  LogSavePath: storage/logs #默认的应用日志存储路径
+  LogFileName: app
+  LogFileExt: .log
+  #新增了四项上传文件所必须的配置项：
+  UploadSavePath: storage/uploads #上传文件的最终保存目录
+  UploadServerUrl: http://127.0.0.1:8080/static #上传文件后的用于展示的文件服务地址。
+  UploadImageMaxSize: 5  #上传文件所允许的最大空间大小（MB）
+  UploadImageAllowExts: #上传文件所允许的文件后缀
+    - .jpg
+    - .jpeg
+    - .png
+  DefaultContextTimeout: 60
+
+#数据库配置
+Database:
+  DBType: mysql
+  Username: root  # 填写你的数据库账号
+  Password: root  # 填写你的数据库密码
+  Host: 127.0.0.1:3306
+  DBName: blog_service
+  TablePrefix: blog_
+  Charset: utf8
+  ParseTime: True
+  MaxIdleConns: 10
+  MaxOpenConns: 30
+
+
+JWT:
+  Secret: eddycjy  #设置JWT令牌的 Secret（密钥）为 eddycjy     Secret 千万不要暴露给外部，只能有服务端知道，否则是可以解密出来的，非常危险
+  Issuer: blog-service #签发者（Issuer）是 blog-service
+  Expire: 7200 #有效时间（Expire）为7200秒
+
+
+Email:
+  Host: smtp.qq.com #通过 HOST 我们可以知道我用的是 QQ 邮件的 SMTP
+  Port: 465 #SMTP Server 的 HOST 端口号
+  UserName: xxxx@qq.com
+  Password: xxxxxxxx
+  IsSSL: true
+  From: xxxx@qq.com
+  To:
+    - xxxx@qq.com
